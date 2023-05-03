@@ -1,45 +1,45 @@
 body {
+			
     background-image: url("./background_image.jpg");
-    background-size: cover;
-    background-position: center;
-    background-color: black;
+}
+form {
+    margin: auto;
+    max-width: 500px;
+    padding: 20px;
     color: white;
-    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
-
-.container {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 20px;
+form label {
+    font-size: 30px;
 }
-
-h1 {
-    font-size: 40px;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
+label {
+    display: block;
+    margin-bottom: 10px;
+    
 }
-
-.movie-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.movie-item {
-    width: 30%;
-    margin-bottom: 20px;
-}
-
-.movie-image {
+input[type=text], select {
     width: 100%;
-    height: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
-
-.movie-title {
-    font-size: 24px;
-    margin: 10px 0;
+input[type=radio] {
+    display: inline-block;
+    margin-right: 10px;
+}
+button {
+    background-color: #f44336;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+}
+button:hover {
+    background-color: #d32f2f;
 }
