@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
 body {
-	color: #ffffff;		
+	  color: #ffffff;		
     background-image: url("./background_image.jpg");
     font-size: 16px;
 }
@@ -20,13 +20,13 @@ body {
     font-family: "Sorts Mill Goudy", serif;
   }
 .title {
-    color: #ffffff;
+    
     font-family: "Bowlby One SC", cursive;
     font-size: 50px;
     letter-spacing: 0.05em;
   }
 .header {
-    color: white;
+    
     text-align: center;
     font-size: 30px;
     font-family: 'Bowlby One SC', cursive;
@@ -40,24 +40,16 @@ body {
   padding: 30px 40px;
   margin-bottom: 30px;
 }
-/* form {
-    margin: auto;
-    max-width: 500px;
-    padding: 20px;
-    color: white;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.8);
-} */
 
-.feedback {
+
+
+  #feedback {
+   
+    resize: none;
+    
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    
-  }
-  #feedback {
-    resize: none;
-    height: 91.46px;
   }
 input[type=text] {
     width: 100%;
@@ -67,21 +59,18 @@ input[type=text] {
     border: 1px solid #ccc;
     border-radius: 4px;
     
-    font-size: 16px;
+    
 }
 select{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    font-size: 20px;
+    
     border: 1px solid #ccc;
     border-radius: 4px;
     
 }
-input[type=radio] {
-   
-    margin-right: 10px;
-}
+
 button {
     width: 160px;
   height: 45px;
