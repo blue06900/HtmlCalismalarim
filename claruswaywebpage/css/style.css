@@ -1,123 +1,101 @@
 *{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    
-    
+        padding: 0px; /*Tüm elementlerin iç kenar boşluğunu sıfırlar*/
+        margin: 0px; /*Tüm elementlerin dış kenar boşluğunu sıfırlar*/
+        box-sizing: border-box; /*Tüm elementlerin boyutlarının iç kenar boşluğunu dahil etmesini sağlar*/    
+   
 }
 body {
     /* background-image: url(/img/backround.jpg);;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; */
-    background-image: linear-gradient(to bottom right, #040025, #02a2c2);
+    background-image: linear-gradient(to bottom right, #040025, #02a2c2); /*Arka plan rengini gradient renk ile belirler*/
 }
 
 header h1 {
-    text-align: center;
-    font-family: "Rubik Vinyl", cursive;
-    font-size: 700;
-    color: white;
-    font-size: 70px;
-    letter-spacing: 3px;
+    text-align: center; /*Başlık metnini merkezler*/
+    font-family: "Rubik Vinyl", cursive; /*Başlık metnin fontunu belirler*/
+    font-size: 700; /*Başlık metnin boyutunu belirler*/
+    color: white; /*Başlık metnin rengini belirler*/
+    font-size: 70px; /*Başlık metnin boyutunu belirler*/
+    letter-spacing: 3px; /*Başlık metnin harf aralığını ayarlar*/
 }
 h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+    display: block; /*H1 elementini blok element yapar*/
+    font-size: 2em; /*H1 elementinin boyutunu belirler*/
+    margin-block-start: 0.67em; /*H1 elementinin blok başlangıç kenar boşluğunu belirler*/
+    margin-block-end: 0.67em; /*H1 elementinin blok bitiş kenar boşluğunu belirler*/
+    margin-inline-start: 0px; /*H1 elementinin yatay başlangıç kenar boşluğunu belirler*/
+    margin-inline-end: 0px; /*H1 elementinin yatay bitiş kenar boşluğunu belirler*/
+    font-weight: bold; /*H1 elementinin font kalınlığını belirler*/
 }
+
 h3 {
-    color: #f4a460;
-    font-size: 32px;
-    font-weight: 700;
-    text-shadow: 2px 5px 5px rgb(73, 68, 68);
-    
+    color: #f4a460; /*H3 elementinin rengini belirler*/
+    font-size: 32px; /*H3 elementinin boyutunu belirler*/
+    font-weight: 700; /*H3 elementinin font kalınlığını belirler*/
+    text-shadow: 2px 5px 5px rgb(73, 68, 68); /*H3 elementine gölgelendirme efekti ekler*/
 }
 
 .card {
-    
-    width: 95%;
-        
-    margin: auto;
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 20px;
+    width: 95%; /* kartın genişliği */
+    margin: auto; /* kartın merkezde konumlandırılması */
+    padding: 20px; /* kartın iç kenar boşluğu */
+    margin-top: 10px; /* kartın üstündeki boşluk */
+    border-radius: 20px; /* kartın kenarlarının yuvarlatılması */
     box-shadow: 
-    rgba(0, 0, 0, 0.09) 0px 2px 1px 2px, 
-    rgba(0, 0, 0, 0.09) 0px 4px 2px 0px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px 0px,
-    rgba(0, 0, 0, 0.09) 0px 16px 8px 10px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px 10px;
-    background-color: #8bc6ec;
-    background-image: linear-gradient(135deg, #544f69 0%, #55cbec 100%);
-    display: flex;
-    
+        rgba(0, 0, 0, 0.09) 0px 2px 1px 2px, 
+        rgba(0, 0, 0, 0.09) 0px 4px 2px 0px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px 0px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px 10px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px 10px; /* kartın gölge efekti */
+    background-color: #8bc6ec; /* kartın arkaplan rengi */
+    background-image: linear-gradient(135deg, #544f69 0%, #55cbec 100%); /* kartın arkaplan resmi */
+    display: flex; /* içerik elemanlarının yatayda hizalanması */
 }
 .card1 {
-    text-align: center;
-    
-   
+    text-align: center; /* içerik elemanlarının ortalanması */
 }
+
 img {
-    border-radius: 20px;
-    /* box-shadow: 0px 21px 19px 11px rgba(0, 0, 0, 0.1); */
-    margin-left: 10px;
-    
-    width: 28%;
-    height: auto;
-    object-fit: contain;
-    /* 
-    float: left;
-    
-    margin:65px 10px ;
-    margin-top: 20px;
-    
-    
-     */
-    /* max-width: 28%; height: auto; */
-    transition: transform 0.2s ease-in-out;
+    border-radius: 20px; /* resmin kenarlarının yuvarlatılması */
+    margin-left: 10px; /* resmin solundaki boşluk */
+    width: 28%; /* resmin genişliği */
+    height: auto; /* resmin oranlarının korunması */
+    object-fit: contain; /* resmin boyutlarının değişmesini önlemek */
+    transition: transform 0.2s ease-in-out; /* resmin üzerine gelince boyutunun büyütülmesi */
 }
 img:hover{
-    transform: scale(1.1);
+    transform: scale(1.1); /* resmin boyutunun 1.1 katına çıkması */
 }
 button {
-    
-    float: right;
-    
+    float: right; /* butonun sağ tarafa yaslanması */
 }
+
 button a{
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 10px;       
-    background-color: #ff7f50;  
+    color: white; /* butondaki yazının rengi */
+    text-decoration: none; /* butondaki yazının altı çizili olmaması */
+    font-size: 16px; /* butondaki yazının boyutu */
+    padding: 10px; /* butonun iç kenar boşluğu */
+    border-radius: 10px; /* butonun kenarlarının yuvarlatılması */
+    background-color: #ff7f50; /* butonun arkaplan rengi */
 }
+
 button a:hover {
-    color: #ff7f50;    
-    font-size: 16px;
-    background-color: #ffffff;
-    
+    color: #ff7f50; /* butondaki yazının hover efekti rengi */
+    font-size: 16px; /* butondaki yazının hover efekti boyutu */
+    background-color: #ffffff; /* butonun hover efekti arkaplan rengi */
 }
 
 p {
-    text-shadow: 2px 5px 5px rgb(109, 105, 105);
-    color: white;
-    font-weight: 700;
-    /* width: 100%; */
-    /* margin-left: 31%; */
-    text-align: justify;
-    /* margin:10px 10px ; */
-    
-    font-size: 20px;
-    
-    margin-block-start: 2em;
-    margin-block-end: 2em;
+    text-shadow: 2px 5px 5px rgb(109, 105, 105); /* Metnin altına gölge ekler */
+    color: white; /* Metnin rengini beyaz yapar */
+    font-weight: 700; /* Metnin kalınlığını bold yapar */
+    text-align: justify; /* Metni iki yana yaslar */
+    font-size: 20px; /* Metnin boyutunu 20 piksel olarak ayarlar */
+    margin-block-start: 2em; /* Paragrafın üstündeki boşluğu 2em olarak ayarlar */
+    margin-block-end: 2em; /* Paragrafın altındaki boşluğu 2em olarak ayarlar */
     /* display: block; */
-    margin-inline-start: 25px;
-    margin-inline-end: 0px;
+    margin-inline-start: 25px; /* Sol kenardan 25 piksel içeriye alır */
+    margin-inline-end: 0px; /* Sağ kenara yapışık */
 }
