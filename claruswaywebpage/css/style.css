@@ -1,0 +1,123 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+    
+}
+body {
+    /* background-image: url(/img/backround.jpg);;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-image: linear-gradient(to bottom right, #040025, #02a2c2);
+}
+
+header h1 {
+    text-align: center;
+    font-family: "Rubik Vinyl", cursive;
+    font-size: 700;
+    color: white;
+    font-size: 70px;
+    letter-spacing: 3px;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+h3 {
+    color: #f4a460;
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 2px 5px 5px rgb(73, 68, 68);
+    
+}
+
+.card {
+    
+    width: 95%;
+        
+    margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 
+    rgba(0, 0, 0, 0.09) 0px 2px 1px 2px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px 0px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px 0px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px 10px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px 10px;
+    background-color: #8bc6ec;
+    background-image: linear-gradient(135deg, #544f69 0%, #55cbec 100%);
+    display: flex;
+    
+}
+.card1 {
+    text-align: center;
+    
+   
+}
+img {
+    border-radius: 20px;
+    /* box-shadow: 0px 21px 19px 11px rgba(0, 0, 0, 0.1); */
+    margin-left: 10px;
+    
+    width: 28%;
+    height: auto;
+    object-fit: contain;
+    /* 
+    float: left;
+    
+    margin:65px 10px ;
+    margin-top: 20px;
+    
+    
+     */
+    /* max-width: 28%; height: auto; */
+    transition: transform 0.2s ease-in-out;
+}
+img:hover{
+    transform: scale(1.1);
+}
+button {
+    
+    float: right;
+    
+}
+button a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;       
+    background-color: #ff7f50;  
+}
+button a:hover {
+    color: #ff7f50;    
+    font-size: 16px;
+    background-color: #ffffff;
+    
+}
+
+p {
+    text-shadow: 2px 5px 5px rgb(109, 105, 105);
+    color: white;
+    font-weight: 700;
+    /* width: 100%; */
+    /* margin-left: 31%; */
+    text-align: justify;
+    /* margin:10px 10px ; */
+    
+    font-size: 20px;
+    
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    /* display: block; */
+    margin-inline-start: 25px;
+    margin-inline-end: 0px;
+}
