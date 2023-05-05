@@ -9,7 +9,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; */
-    background-image: linear-gradient(to bottom right, #040025, #02a2c2); /*Arka plan rengini gradient renk ile belirler*/
+    background-image: linear-gradient(to bottom right, #040025,#e9a4e5, #02a2c2); /*Arka plan rengini gradient renk ile belirler*/
 }
 
 header h1 {
@@ -70,6 +70,8 @@ img:hover{
 }
 button {
     float: right; /* butonun sağ tarafa yaslanması */
+    outline: none; /*  kenarlık çizgisini kaldırmak için kullanılır. */
+    border: none; /* çerçeve kenarlığını kaldırmak için kullanılır.*/
 }
 
 button a{
@@ -79,6 +81,7 @@ button a{
     padding: 10px; /* butonun iç kenar boşluğu */
     border-radius: 10px; /* butonun kenarlarının yuvarlatılması */
     background-color: #ff7f50; /* butonun arkaplan rengi */
+    
 }
 
 button a:hover {
@@ -98,4 +101,5 @@ p {
     /* display: block; */
     margin-inline-start: 25px; /* Sol kenardan 25 piksel içeriye alır */
     margin-inline-end: 0px; /* Sağ kenara yapışık */
+    text-indent: 2rem; /* Paragrafın ilk satırına girinti verir. */
 }
