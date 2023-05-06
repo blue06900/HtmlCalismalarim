@@ -1,0 +1,111 @@
+* {
+    margin: 0; /* Tüm öğelerin dış kenarlıklarını sıfırlar */
+    padding: 0; /* Tüm öğelerin iç kenarlıklarını sıfırlar */
+    box-sizing: border-box; /* Öğelerin kenarlık ve dolgularını öğenin toplam genişliğine dahil eder */
+    
+  }
+  
+  body {
+    font-family: "Lato", sans-serif; /* Yazı tipini "Lato" olarak ayarlar */
+    /*font-weight: 400; /* Yazı tipinin kalınlığını normal (400) olarak ayarlar */
+    line-height: 1.8rem; /* Satır aralığını 1.8rem olarak ayarlar */
+    /*color: #666666; /* Yazı rengini griye yakın bir renk tonu olarak ayarlar */
+    height: 100%; /* Sayfa yüksekliğini %100 olarak ayarlar */
+    justify-content: center; /* İçeriği yatayda merkezler */
+  }
+  
+  section {
+    text-align: center; /* İçeriği ortalar */
+  }
+  
+  p{
+      text-align: justify; /* Paragrafları yaslanmış hizalama (justified) olarak ayarlar */
+  }
+  
+  .bg{
+      height: 100vh; /* Arka plan resminin yüksekliğini görüntüleme alanının tamamına ayarlar */
+  }
+  .bg{
+      margin: 0 auto; /* Arka plan resmini sayfanın ortasına hizalar */
+      
+      background-position: center; /* Arka plan resminin konumunu merkezler */
+      background-size: cover; /* Arka plan resminin boyutunu içeriğe sığacak şekilde ayarlar */
+      background-repeat: no-repeat; /* Arka plan resmini tekrarlamaz */
+      
+      background-attachment: fixed; /* Arka plan resmini sayfada sabitlenmiş olarak tutar */
+      display: flex; /* İçerikleri esnek kutu modeli olarak ayarlar */
+      align-items: center; /* İçerikleri dikeyde merkezler */
+      opacity: 0.7; /* Saydamlığı %70 olarak ayarlar */
+    }
+  
+  .header {
+      
+      margin: 0 auto; /* Başlık alanını sayfanın ortasına hizalar */
+      
+      color: white; /* Başlık yazısının rengini beyaz olarak ayarlar */
+      background-color: rgb(0, 0, 0); /* Başlık arka planını siyah olarak ayarlar */
+      padding: 1rem; /* Başlık alanının iç kenarlıklarını 1rem olarak ayarlar */
+      
+      letter-spacing: 0.5rem; /* Karakter aralığını 8px olarak ayarlar */
+      font-size: 3rem; /* Yazı boyutunu 3rem olarak ayarlar */
+      
+      outline: 0.4rem inset purple; /* Dış çizgiyi 0.4rem içeriğe doğru içeri alır ve mor renkte ayarlar */
+      outline-color: purple; /* Dış çizgi rengini mor olarak ayarlar */
+      outline-style: inset; /* Dış çizgi stilini içe doğru ayarlar */
+      outline-width: 0.5rem; /* Dış çizgi kalınlığını 0.5rem olarak ayarlar */
+      outline-offset: 0.5rem; /* Dış çizgi ile başlık arasındaki boşluğu 0.6rem olarak ayarlar */
+      border-radius: 1rem 0; /* Köşeleri yuvarlatır */
+      border-top-left-radius: 1rem; /* Üst sol köşeyi yuvarlatır */    
+      border-bottom-right-radius: 1rem; /* Alt sağ köşeyi yuvarlatır */    
+      line-height: 2.5rem; /* Satır yüksekliğini 2.5rem olarak ayarlar */
+      
+}
+
+.header-big {
+    padding: 2rem; /* Başlık alanının iç kenarlıklarını 1rem olarak ayarlar */    
+    outline-offset: 0.8rem; /* Dış çizgi ile başlık arasındaki boşluğu 0.6rem olarak ayarlar */
+    border-radius: 1.5rem 0; /* Köşeleri yuvarlatır */
+    border-top-left-radius: 2rem; /* Üst sol köşeyi yuvarlatır */    
+    border-bottom-right-radius: 2rem; /* Alt sağ köşeyi yuvarlatır */    
+    line-height: 3.5rem; /* Satır yüksekliğini 2.5rem olarak ayarlar */
+   
+}
+.header-small {
+    padding: 2rem; /* Başlık alanının iç kenarlıklarını 1rem olarak ayarlar */    
+    outline-offset: 0.2rem; /* Dış çizgi ile başlık arasındaki boşluğu 0.6rem olarak ayarlar */
+    border-radius: 1.5rem 0; /* Köşeleri yuvarlatır */
+    border-top-left-radius: 1rem; /* Üst sol köşeyi yuvarlatır */    
+    border-bottom-right-radius: 1rem; /* Alt sağ köşeyi yuvarlatır */    
+    line-height: 0.7rem; /* Satır yüksekliğini 2.5rem olarak ayarlar */
+   
+}
+
+
+.section-text {
+padding: 4rem; /* İç kenar boşluğunu 4rem olarak ayarlar */
+/*font-weight: 700; /* Yazı kalınlığını kalın olarak ayarlar */
+background-color: #F1F1F1; /* Arka plan rengini açık gri olarak ayarlar */
+}
+
+.section-text h2 {
+font-size: 1.5rem; /* Yazı boyutunu 1.5rem olarak ayarlar */
+margin-bottom: 1rem; /* Alt boşluk bırakır */
+
+color: #666666;
+}
+
+.dark {
+background-color:#282E34; /* Arka plan rengini koyu mavi olarak ayarlar */
+color: #fff; /* Yazı rengini beyaz olarak ayarlar */
+}
+
+.logo {
+text-align: center; /* Metni merkezler */
+
+}
+
+.logo img {
+
+width: 28%; /* Resmin genişliğini %28 olarak ayarlar */
+opacity: 0.9; /* Saydamlığı %90 olarak ayarlar */
+}
