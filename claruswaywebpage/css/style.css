@@ -64,6 +64,7 @@ img {
     height: auto; /* resmin oranlarının korunması */
     object-fit: contain; /* resmin boyutlarının değişmesini önlemek */
     transition: transform 0.2s ease-in-out; /* resmin üzerine gelince boyutunun büyütülmesi */
+    cursor: pointer;
 }
 img:hover{
     transform: scale(1.1); /* resmin boyutunun 1.1 katına çıkması */
