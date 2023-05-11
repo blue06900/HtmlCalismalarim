@@ -1,0 +1,78 @@
+* {
+    margin: 0; /* Tüm öğelerin dış kenarlıklarını sıfırlar */
+    padding: 0; /* Tüm öğelerin iç kenarlıklarını sıfırlar */
+    box-sizing: border-box; /* Öğelerin kenarlık ve dolgularını öğenin toplam genişliğine dahil eder */
+}
+body {
+   font-family: "Lato", sans-serif; /* Yazı tipini "Lato" olarak ayarlar */
+    /*font-weight: 400; /* Yazı tipinin kalınlığını normal (400) olarak ayarlar */
+    line-height: 1.8rem; /* Satır aralığını 1.8rem olarak ayarlar */
+    /*color: #666666; /* Yazı rengini griye yakın bir renk tonu olarak ayarlar */
+    height: 100%; /* Sayfa yüksekliğini %100 olarak ayarlar */
+    justify-content: center; /* İçeriği yatayda merkezler */
+}
+.logo{
+    text-align: left;
+    width: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+header{
+    padding: 20px;
+    background-image:linear-gradient(180deg, #BCC2DD 0%, #faa4f6 60%); /* 70% şeffaflıkta koyu gri bir arka plan */
+    display: flex;
+    
+     
+}
+.login a {
+    
+   
+    
+    text-align: right;
+    padding: 16px;
+    text-decoration: none;
+}
+img{
+    
+    margin: 0 auto; /* Arka plan resmini sayfanın ortasına hizalar */
+      
+      
+      width: 100%;
+}
+.navbar {
+    padding: 10px;
+    background-image:linear-gradient(45deg, #fbda61 0%, #ff5acd 100%); /* 70% şeffaflıkta koyu gri bir arka plan */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    text-decoration: none;   
+    
+    display: flex;
+    justify-content:center;
+    
+}
+
+
+
+
+
+.navbar a {
+    /* display: block; */
+    /* color: white; */
+    
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+/* .main-content {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 20px;
+} */
