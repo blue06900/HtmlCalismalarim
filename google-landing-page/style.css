@@ -62,9 +62,11 @@
     vertical-align: middle;
   }
   .header__link--avatar:hover {
-    height: 34px;
-    width: 34px;
-    background-color: #d3d3d3;
+    /* height: 34px;
+    width: 34px; */
+    border: 2px solid #498af4;
+    border-radius:50%;
+    background-color: #85a4f7;
   }
   /* Main  */
   
