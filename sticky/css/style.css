@@ -1,7 +1,8 @@
 * {
-    margin: 0; /* Tüm öğelerin dış kenarlıklarını sıfırlar */
-    padding: 0; /* Tüm öğelerin iç kenarlıklarını sıfırlar */
-    box-sizing: border-box; /* Öğelerin kenarlık ve dolgularını öğenin toplam genişliğine dahil eder */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; 
 }
 body {
    font-family: "Lato", sans-serif; /* Yazı tipini "Lato" olarak ayarlar */
@@ -11,29 +12,85 @@ body {
     height: 100%; /* Sayfa yüksekliğini %100 olarak ayarlar */
     justify-content: center; /* İçeriği yatayda merkezler */
 }
-.logo{
-    text-align: left;
-    width: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-}
-header{
-    padding: 20px;
-    background-image:linear-gradient(180deg, #BCC2DD 0%, #faa4f6 60%); /* 70% şeffaflıkta koyu gri bir arka plan */
-    display: flex;
+.header {
+    padding: 15px;   
+    background-image:linear-gradient(180deg, #BCC2DD 0%, #A8CFDF 60%); /* 70% şeffaflıkta koyu gri bir arka plan */
     
-     
-}
-.login a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+  }
+  .header__left {
+    float: left;
     
+  }
+  .header__right {
+    float: right;
+    
+  }
+  .header__item {
+    
+    display: inline;
+    
+    
+  }
+  .header__link {  
+    font-size: 18px;
+    padding: 1px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: #920101;
+    
+  }
+  .header__link:hover {
+    text-decoration: underline;
+  }
+  .header__link--logo {
+    width: 60px;
+    height: 80px;
+    margin: 10px;
+    opacity: 0.7;
    
     
-    text-align: right;
-    padding: 16px;
-    text-decoration: none;
-}
+  }
+  .header__link--logo:hover {
+    opacity: 1;
+  }
+  h1 {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 60%; /* Resmin ortasına hizalama */
+    left: 10%; /* Resmin ortasına hizalama */    
+    color: white; /* Yazı rengi */
+    font-size: 60px; /* Yazı boyutu */
+    font-weight: bold; /* Yazı kalınlığı */
+    
+  }
+  h3 {
+    position: absolute; /* Mutlak konumlandırma */
+    top: 68%; /* Resmin ortasına hizalama */
+    left: 10%; /* Resmin ortasına hizalama */    
+    color: rgb(100, 3, 3); /* Yazı rengi */
+    font-size: 30px; /* Yazı boyutu */
+    font-weight: bold; /* Yazı kalınlığı */
+    text-shadow: #afacac 0px 2px 4px;
+  }
+  button{
+    position: absolute; /* Mutlak konumlandırma */
+    top: 74%; /* Resmin ortasına hizalama */
+    left: 10%; /* Resmin ortasına hizalama */    
+    color: rgb(255, 255, 255); /* Yazı rengi */
+    background-color: #c01c1c;
+    box-shadow: #afacac 2px 4px 5px;
+    padding: 8px;
+    border-radius: 8px ;    
+    font-size: 20px; /* Yazı boyutu */
+    font-weight: bold; /* Yazı kalınlığı */
+    cursor: pointer;
+  }
+  button:hover{
+    color: #c01c1c; /* Yazı rengi */
+    background-color: #ffffff;
+  }
 img{
     
     margin: 0 auto; /* Arka plan resmini sayfanın ortasına hizalar */
@@ -54,14 +111,11 @@ img{
     
 }
 
-
-
-
-
 .navbar a {
     /* display: block; */
-    /* color: white; */
-    
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'DynaPuff', cursive;
     text-align: center;
     padding: 16px;
     text-decoration: none;
@@ -71,8 +125,42 @@ img{
     color: white;
 }
 
-/* .main-content {
+.main-content {
+    
     margin-top: 50px;
     padding: 20px;
     font-size: 20px;
-} */
+    text-align: justify;
+}
+p::first-letter {
+    font-size: 3em;
+    padding-right: 4px; 
+  font-weight: bold;
+  }
+.slack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    font-size: 32px;
+    bottom: 40px;
+    right: 40px;
+    background-color: white;
+    color: red;
+    padding: 2px;
+    border-radius: 50%;
+}
+.slack:hover{
+    background-color: red;
+    color: white;
+    padding: 2px;
+    border-radius: 50%;
+    
+    /* outline: 0.4rem inset purple; */
+      outline-color: red; /* Dış çizgi rengini mor olarak ayarlar */
+      outline-style:double; /* Dış çizgi stilini içe doğru ayarlar */
+      outline-width: 4px; /* Dış çizgi kalınlığını 0.5rem olarak ayarlar */
+      outline-offset: 3px; /* Dış çizgi ile başlık arasındaki boşluğu 0.6rem olarak ayarlar */
+}
