@@ -1,0 +1,230 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; 
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+    
+
+}
+ .menu {
+  color: white;
+  
+}
+
+
+.header {
+    padding: 15px;
+    color: #ffffff;
+    border-bottom: 0.3rem solid #8F508B;    
+    /* background-image:linear-gradient(180deg, #BCC2DD 0%, #A8CFDF 60%); 70% şeffaflıkta koyu gri bir arka plan */
+    background-color: #283442;
+    display: flex;
+    justify-content: space-between;
+  
+
+      
+  }
+  .logo{
+    font-size: 21px;
+    font-weight: 700;
+  }
+   
+ 
+  .header .active{
+    color: white;
+    padding: 0.6rem;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .header .active:hover {
+    color: #8F508B;
+    
+  }
+  .renklendir{
+    color: #8F508B;
+    font-size: 14px;
+    padding: 0.6rem;
+    font-weight: 600;
+  }
+ .icerik{
+  height: 35rem;
+  background-image: url(../img/showcase.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  color: white;
+}
+.icerik h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 1rem;
+ 
+}
+.icerik p{
+  font-size: 20px;
+}
+
+.mail{
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: #283442;
+  display: flex;
+  justify-content: space-between;
+}  
+.submit{
+  font-size: 14px;
+  padding: 0.4rem 1.5rem;
+    background-color: #e8491d;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
+}  
+.submit:hover{
+  cursor: pointer;
+    background-color: #ffffff;
+    color: #fd0000;
+}
+.input{
+  width: 20rem;
+  padding: 0.4rem;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  border-radius: 2px;
+}
+main{
+  background-color: #F4F4F4;
+
+}
+.diller{
+    
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+    margin: 3rem auto;
+  }
+.diller img {
+  width: 20%;
+  
+}
+.diller h3{
+  padding-top: 30px;
+} 
+
+
+footer{
+  
+  background-color: #283442;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer p {
+    padding: 1rem;
+    color: white;
+  }
+
+  /*! ABOUT CSS*/
+
+  .about_text{
+    
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    /* height: 100vh; */
+    
+  }
+  .about_text .column{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    
+
+  }
+  .text{
+    background-color: #283442;
+    color: white;
+    display: block;
+    padding: 1.5rem;
+    height:min-content;
+    
+  }
+   /*! SERVİCES CSS*/
+   .card{ 
+    width: ;
+    background-color: #E6E6E6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 5px 5px rgb(173, 165, 165);
+   }
+   .services{
+    margin-bottom: 1rem;
+    
+   }
+   .services_text{
+    
+    padding: 1.5rem;
+    display: flex;
+    /* justify-content: space-between; */
+    /* text-align: justify; */
+    /* height: 100vh; */
+    
+  }
+  .column{
+    width: 250%;
+    margin-right: 2rem;
+  }
+  .services-form {
+    background-color: #35424a;
+    height: 300px;
+    width: 470px;
+    padding: 10px;
+    color: white;
+}
+
+
+.services-form input, textarea {
+  height: 40px;
+  width: 450px;
+  
+}
+.btn {
+    font-weight: bold;
+    background-color: #e8491d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #e8491d;
+  border: none;
+  cursor: pointer;
+}
+.about-profile-title{
+  padding-bottom: 1rem;
+}
+.column h3{
+  margin-left: 0.3rem;
+  margin-bottom: 1rem;
+}
+.card1{
+  margin-top: 3rem;
+}
