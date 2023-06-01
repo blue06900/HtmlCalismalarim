@@ -24,3 +24,10 @@ fieldset{
 td, tr, th {
     padding: 5px;
 }
+h2{
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex: direction ;
+}

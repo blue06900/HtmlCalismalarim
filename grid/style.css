@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    
+  }
+  
+  .container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 97vh;
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 1rem ;
+    font-size: 28px;
+  
+    /*? Grid'i yatay düzlemde hizalar */
+    justify-content: center;
+  }
+  
+  .content {
+    background-color: #424DE3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+      
+  .navigation {
+    grid-area: 1/1/1/5;   
+  }
+  
+  .smallbox1 {
+    color: chocolate;
+    background-image: url("https://picsum.photos/id/68/600/400");
+    background-position: center;
+    grid-area: 2/1/5/2;   
+  }
+  
+  .smallbox2 {
+    /*!  grid-area: row_start / col_start / row_end / col_end */
+    grid-area: 2/2/5/3;    
+  }
+  .smallbox3 {
+    grid-area: 2/3/5/3;    
+  }
+  .sidebar {
+    grid-area: 2/4/6/4;    
+  }
+  .maincontent {
+    /*! grid-area: row_start / col_start / row_end / col_end */
+    grid-area: 5/1/5/4;
+  }
+  
+  .footer {
+    
+    background-image: url("https://picsum.photos/id/684/600/400");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: 6/1/6/5;    
+  }
+  
