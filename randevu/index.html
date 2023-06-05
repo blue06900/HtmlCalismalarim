@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Takvim</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .month-label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Takvim</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="form-inline">
+            <label for="month">Ay:</label>
+            <select id="month" class="form-control mx-2"></select>
+
+            <label for="year">Yıl:</label>
+            <select id="year" class="form-control mx-2"></select>
+          </div>
+
+          <button id="addAppointmentBtn" class="btn btn-primary">Randevu Ekle</button>
+        </div>
+
+        <h4 id="monthLabel" class="month-label"></h4>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Pzt</th>
+              <th scope="col">Sal</th>
+              <th scope="col">Çar</th>
+              <th scope="col">Per</th>
+              <th scope="col">Cum</th>
+              <th scope="col">Cmt</th>
+              <th scope="col">Paz</th>
+            </tr>
+          </thead>
+          <tbody id="calendar-body">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Modal Form -->
+  <div class="modal fade" id="appointmentModal" tabindex="-1" role="dialog" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="appointmentModalLabel">Randevu Ekle</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="appointmentInput">Randevu:</label>
+            <input type="text" class="form-control" id="appointmentInput">
+          </div>
+          <div class="form-group">
+            <label for="selectedDate">Tarih:</label>
+            <input type="text" class="form-control" id="selectedDate" readonly>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-primary" id="saveAppointmentBtn">Kaydet</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function createCalendar(month, year) {
+      var calendarBody = document.getElementById("calendar-body");
+      calendarBody.innerHTML = "";
+
+      var firstDay = new Date(year, month - 1, 1);
+      var lastDay = new Date(year, month, 0);
+      var startDate = new Date(firstDay);
+      startDate.setDate(startDate.getDate() - startDate.getDay());
+
+      var endDate = new Date(lastDay);
+      endDate.setDate(endDate.getDate() + (6 - endDate.getDay()));
+
+      var currentDate = new Date(startDate);
+
+      var currentDate = new Date(startDate);
+
+while (currentDate <= endDate) {
+  var row = document.createElement("tr");
+
+  for (var i = 0; i < 7; i++) {
+    var cell = document.createElement("td");
+    var day = currentDate.getDate();
+
+    cell.innerText = day;
+
+          var today = new Date();
+          if (
+            currentDate.getFullYear() === today.getFullYear() &&
+            currentDate.getMonth() === today.getMonth() &&
+            currentDate.getDate() === today.getDate()
+          ) {
+            cell.classList.add("font-weight-bold");
+          }
+
+          cell.addEventListener("click", function () {
+      var selectedDate = new Date(year, month - 1, parseInt(this.innerText));
+      openAppointmentModal(selectedDate);
+    });
+
+    row.appendChild(cell);
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+
+  calendarBody.appendChild(row);
+}
+    }
+
+    function fillOptions(selectId, start, end) {
+      var select = document.getElementById(selectId);
+      select.innerHTML = "";
+
+      for (var i = start; i <= end; i++) {
+        var option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        select.appendChild(option);
+      }
+    }
+
+    function openAppointmentModal(date) {
+      var appointmentInput = document.getElementById("appointmentInput");
+      appointmentInput.value = "";
+
+      var selectedDateInput = document.getElementById("selectedDate");
+      selectedDateInput.value = formatDate(date);
+
+      $("#appointmentModal").modal("show");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var monthSelect = document.getElementById("month");
+      var yearSelect = document.getElementById("year");
+      var monthLabel = document.getElementById("monthLabel");
+
+      var date = new Date();
+      var currentMonth = date.getMonth() + 1;
+      var currentYear = date.getFullYear();
+
+      fillOptions("month", 1, 12);
+      fillOptions("year", currentYear - 10, currentYear + 10);
+
+      monthSelect.value = currentMonth;
+      yearSelect.value = currentYear;
+
+      createCalendar(currentMonth, currentYear);
+      monthLabel.innerText = getMonthName(currentMonth);
+
+      monthSelect.addEventListener("change", function () {
+        var selectedMonth = parseInt(monthSelect.value);
+        var selectedYear = parseInt(yearSelect.value);
+        createCalendar(selectedMonth, selectedYear);
+        monthLabel.innerText = getMonthName(selectedMonth);
+      });
+
+      yearSelect.addEventListener("change", function () {
+        var selectedMonth = parseInt(monthSelect.value);
+        var selectedYear = parseInt(yearSelect.value);
+        createCalendar(selectedMonth, selectedYear);
+      });
+
+      var addAppointmentBtn = document.getElementById("addAppointmentBtn");
+      addAppointmentBtn.addEventListener("click", function () {
+        var selectedMonth = parseInt(monthSelect.value);
+        var selectedYear = parseInt(yearSelect.value);
+        var selectedDate = new Date(selectedYear, selectedMonth - 1, 8);
+        openAppointmentModal(selectedDate);
+      });
+
+      var saveAppointmentBtn = document.getElementById("saveAppointmentBtn");
+    saveAppointmentBtn.addEventListener("click", function () {
+      var appointmentInput = document.getElementById("appointmentInput");
+      var appointment = appointmentInput.value;
+
+      if (appointment.trim() !== "") {
+        var selectedDateInput = document.getElementById("selectedDate");
+        var selectedDate = new Date(selectedDateInput.value);
+        var day = selectedDate.getDate();
+        var month = selectedDate.getMonth() + 1;
+        var year = selectedDate.getFullYear();
+
+        var calendarRows = document.getElementById("calendar-body").getElementsByTagName("tr");
+        var row = calendarRows[day - 1];
+        var cell = row.getElementsByTagName("td")[month - 1];
+
+        var appointmentDiv = document.createElement("div");
+        appointmentDiv.classList.add("appointment");
+        appointmentDiv.innerText = appointment;
+
+        cell.innerHTML = ""; // İlgili hücredeki tüm içeriği temizleyin
+        cell.appendChild(appointmentDiv);
+      }
+
+      $("#appointmentModal").modal("hide");
+    });
+    });
+
+    // Ay adını döndüren bir fonksiyon
+    function getMonthName(month) {
+      var monthNames = [
+        "Ocak",
+        "Şubat",
+        "Mart",
+        "Nisan",
+        "Mayıs",
+        "Haziran",
+        "Temmuz",
+        "Ağustos",
+        "Eylül",
+        "Ekim",
+        "Kasım",
+        "Aralık",
+      ];
+      return monthNames[month - 1];
+    }
+
+    // Tarihi dd.mm.yyyy formatına dönüştüren bir fonksiyon
+    function formatDate(date) {
+      var day = date.getDate();
+      var month = date.getMonth() + 1;
+      var year = date.getFullYear();
+
+      if (day < 10) {
+        day = "0" + day;
+      }
+
+      if (month < 10) {
+        month = "0" + month;
+      }
+
+      return day + "." + month + "." + year;
+    }
+  </script>
+</body>
+</html>
