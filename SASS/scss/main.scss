@@ -1,0 +1,105 @@
+/*/ partial dosyaları @import ifadesiyle ana dosyamıza import edip kullanabiliriz*/
+
+@import "reset";
+@import "variables";
+
+
+body {
+    background-color: $bgColor;/*değişkenşi kullanırkende aynı şekilde $ işaretini kullanıyoruz*/
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $fontColor;
+}
+
+/** Nesting */
+
+header {
+    background-color: $navBgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    img {
+        width: 80px;
+        border: $myBorder;
+        border-radius: 11px;
+        cursor: pointer;
+        &:hover {/*! içinde bulunduğumuz lementi & ile refer edebiliriz*/
+            // transform: scale(1.1);
+            scale:1.1;
+        }
+    }
+    ul {
+        list-style-type: none;
+        li {
+            padding: 0.5rem;
+            display: inline-block;
+            a{
+                text-decoration: none;
+                color: $fontColor;
+                &:hover {
+                  text-decoration: underline;  
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bannerBgColor;
+    padding: 1rem;
+    line-height: 2rem;
+
+    aside{
+        button{
+            padding: 0.5rem;
+            border: none;
+            border-radius: 7px;
+            background-color: $buttonColor;
+            cursor: pointer;
+            &:hover{
+                background-color: $bgColor;
+            }
+        }
+    }
+    img{
+        width: 30%;
+    }
+}
+
+/*! mixin @include */
+/* fonksiyon tanımlıyoruz aslında. Bu fonksiyon parametre alabilen bir fonksiyon. Parametreleri tanımalrken $ işaretini kullanıyoruz. Mixinler parametre almak zorunda değildir. yani static yapılar da oluşturabiliriz. */
+/*mixinleri çaığırırken @include anahtar kelimesiyle çağırıyoruz.*/
+@mixin myBox($backColor,$color) {
+    background-color: $backColor;
+    color: $color;
+    text-align: center;
+    width: 25%;
+    height: 14rem;
+    border: $myBorder;
+    border-radius: 1rem;
+}
+
+.cards {
+    display: flex;
+    gap: 0.5rem;
+    .card1{
+        @include myBox(yellow,darkblue);
+    }
+    .card2{
+        @include myBox(red,yellow);
+    }
+    .card3{
+        @include myBox(black,white);
+    }
+    .card4{
+        @include myBox(maroon,darkblue);
+    }
+}
+
+//*****************
+//! @EXTEND
+//*****************
